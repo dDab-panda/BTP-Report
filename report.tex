@@ -1,0 +1,153 @@
+\documentclass[12pt]{report}
+
+\usepackage{amsthm,amssymb,mathrsfs,setspace,pstricks-add}%amsmath, latexsym,footmisc
+
+\usepackage{play}
+\usepackage{epsfig}
+%\usepackage[grey,times]{quotchap}
+\usepackage[nottoc]{tocbibind}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+
+\input xy
+\xyoption{all}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{T heorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+\begin{document}
+
+%\pagenumbering{arabic} \setcounter{page}{1}
+
+% --------------- Title page -----------------------
+\begin{titlepage}
+\enlargethispage{3cm}
+
+\begin{center}
+
+\vspace*{-2cm}
+
+\textbf{\Large DISTRIBUTED GRAPH REALIZATIONS}
+
+\vfill
+
+ A Project Report Submitted \\
+ in Partial Fulfilment of the Requirements  \\
+  for the Degree of  \\[10pt]
+
+ {\Large \bf BACHELOR OF TECHNOLOGY}\\[5pt]
+ in \\
+ {\large \bf Mathematics and Computing}
+
+ \vfill
+
+{\large \emph{by}}\\[5pt]
+{\large\bf {Tejasvee Panwar}}\\[5pt]
+{\large (Roll No. 170123053)}
+
+{\large\bf {Aayush Bansal}}\\[5pt]
+{\large (Roll No. 170123001)}
+\vfill
+\includegraphics[height=2.5cm]{iitglogo.eps}
+
+\vspace*{0.5cm}
+
+{\em\large to the}\\[10pt]
+{\bf\large DEPARTMENT OF MATHEMATICS} \\[5pt]
+{\bf\large \mbox{INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI}}\\[5pt]
+{\bf\large GUWAHATI - 781039, INDIA}\\[10pt]
+{\it\large November 2020}
+\end{center}
+
+\end{titlepage}
+
+\clearpage
+
+% --------------- Certificate page -----------------------
+\pagenumbering{roman} \setcounter{page}{2}
+\begin{center}
+{\Large{\bf{CERTIFICATE}}}
+\end{center}
+%\thispagestyle{empty}
+
+
+\noindent
+This is to certify that the work contained in this report
+entitled {\textbf{``Distributed Graph Realizations"}} submitted by \textbf{Tejasvee Panwar}
+(\textbf{Roll No: 170123053}) and \textbf{Aayush Bansal}
+(\textbf{Roll No: 170123001}) to Department of Mathematics, Indian Institute of Technology
+Guwahati towards the requirement of the course \textbf{MA499 Project}
+has been carried out by them under my
+supervision.
+
+\vspace{4cm}
+
+\noindent Guwahati - 781 039 \hfill (Dr. Partha Sarathi Mandal)
+
+\noindent November 2020   \hfill Project Supervisor
+
+\clearpage
+
+% --------------- Abstract page -----------------------
+\begin{center}
+{\Large{\bf{ABSTRACT}}}
+\end{center}
+
+
+The main aim of the project ........
+
+\clearpage
+
+
+
+\tableofcontents
+\clearpage
+% represent dry run examples for the algorithms as figures
+\listoffigures
+% not sure we will need tables
+% \listoftables
+
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% =========== Main chapters starts here. Type in separate files and include the filename here. ==
+% ============================
+
+\input introduction.tex
+
+\input {review of prior works.tex}
+
+\input {split graph realization.tex}
+
+\input {edge weight graph realization.tex}
+
+\input {conclusion.tex}
+
+\nocite{golub} \nocite{gerla}\nocite{m1}\nocite{chang}
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+\end{document}
+
